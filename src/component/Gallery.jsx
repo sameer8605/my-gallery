@@ -7,7 +7,7 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 
     const [photos,setPhoto] = useState([])
     useEffect(()=>{
-    axios.get(`${baseUrl}/api/auth/photos`)
+    axios.get(`${baseUrl}/api/auth/photos` , {withCredentials : true})
     .then((res)=>{
         console.log(res)
         setPhoto(res.data)
