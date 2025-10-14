@@ -14,11 +14,10 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
     })
     },[])
   return (
-    <div >
       <div className=" col-sm-11 d-flex flex-wrap w-100">
         {photos.map((photo) => (
           
-            <div key={photo.id} className="my-3 shadow-sm border-1 w-100">
+            <div key={photo.id} className="my-3 shadow-sm border-1 w-100" style={{height:'400px'}}>
               <img
               className="gallery-img"
                 src={photo.image}
@@ -28,6 +27,6 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
           
         ))}
       </div>
-    </div>
+    
   );
 }
