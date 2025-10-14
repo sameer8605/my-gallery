@@ -1,7 +1,7 @@
 
     .gallery-img {
-  width: 100%;         /* full width of column */
-  height: 200px;       /* fixed height for all images */
+          /* full width of column */
+  height: 500px;       /* fixed height for all images */
   object-fit: cover;   /* keeps aspect ratio, crops overflow */
   border-radius: 5px;  
 }
