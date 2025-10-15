@@ -1,11 +1,10 @@
 /* main gallery wrapper — centered and mobile sized */
 .mobile-gallery {
-  width: 375px;              /* typical mobile width (like iPhone 8 / similar to Poco ratio) */
-  height: 667px;             /* typical mobile height */
+  width: 330px;              /* typical mobile width (like iPhone 8 / similar to Poco ratio) */
+  height: 650px;             /* typical mobile height */
   border: 10px solid #000;   /* simulate mobile frame (optional) */
   border-radius: 30px;
-  overflow-y: scroll;        /* scrollable like a phone gallery */
-  margin: 20px auto;         /* center it */
+  overflow-y: scroll;        /* scrollable like a phone gallery */        /* center it */
   background: #000;          /* black background like gallery */
 }
 
