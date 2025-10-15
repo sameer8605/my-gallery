@@ -3,10 +3,12 @@ import {  useFormik } from "formik";
 import { useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
+import Loader from "./loader";
 
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export default function AddPhotos(){
+    const [loading,setLoading] = useState(false)
     const[selectedImageFile,setselectedImageFile] = useState([])
     const [imagePreviews, setImagePreviews] = useState([]);
    
@@ -19,6 +21,7 @@ export default function AddPhotos(){
             image: [] 
         },
         onSubmit : ()=>{
+             setLoading(true)
             const formData = new FormData();
             if(selectedImageFile){
                 console.log(selectedImageFile)
@@ -34,8 +37,9 @@ export default function AddPhotos(){
          .then((res)=>{
           console.log(res)
           if(res.status == 200){
+            setLoading(false)
           //  toast.success("Product Added Successfully")
-            navigate("/admin-dash")
+            navigate("/")
           }
          } )
          .catch((err)=>{
@@ -74,6 +78,14 @@ export default function AddPhotos(){
     }
 
 
+    if(loading){
+
+      return(
+        <div>
+          <Loader />
+        </div>
+      )
+    }
    
 
    
